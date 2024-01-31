@@ -5,16 +5,28 @@ html {
     margin-top: 2.5%;
 }
 
+body {
+    background-color:darkgray;
+}
+
 .card-body {
     position: relative;
+}
+
+.card-title > img {
+    width: 275px;
 }
 
 .read-btn {
     display: none;
     position: absolute;
-    bottom: 10px;
-    left: 50%;
+    top:50%;
+    left:50px;
     transform: translateX(-50%);
+    width:200px;
+    opacity:1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform:scale(1.1);
 }
 
 .card_1:hover .read-btn,
