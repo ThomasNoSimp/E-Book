@@ -1,0 +1,34 @@
+/* Main Styles */
+
+html {
+    scroll-behavior: smooth;
+    margin-top: 2.5%;
+}
+
+.card-body {
+    position: relative;
+}
+
+.read-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card_1:hover .read-btn,
+.card_2:hover .read-btn,
+.card_3:hover .read-btn,
+.card_4:hover .read-btn {
+    display: block;
+}
+
+.card_1:hover,
+.card_2:hover,
+.card_3:hover,
+.card_4:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 10px grey;
+    transform: scale(1.05);
+}
