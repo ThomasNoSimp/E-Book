@@ -1,23 +1,29 @@
+let categoryText = document.querySelector('[name="category-text"]');
+let bookText = document.querySelector('[name="book-text"]');
+let authorText = document.querySelector('[name="author-text"]');
+let contactUsText = document.querySelector('[name="contact-us-text"]');
 
+let category = $('.categories');
+let author = $('.authors');
+let book = $('.books');
+let contactUs = $('.contact-us');
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Get all cards
-//     let cards = document.querySelectorAll('.card');
+function TakeToPageOnClick() {
+    category.on("click", () => {
+        window.open('../../phpinfo.php', '_blank');
+    });
 
-//     // Iterate over each card
-//     cards.forEach(function(card) {
-//         // Add click event listener to the card
-//         card.addEventListener('click', function() {
-//             window.location.href = '../../phpinfo.php';
-//         });
+    author.on("click", () => {
+        window.open('../../phpinfo.php', '_blank');
+    });
 
-//         // Get the button inside the card
-//         let button = card.querySelector('.read-btn');
+    book.on("click", () => {
+        window.open('../../phpinfo.php', '_blank');
+    });
 
-//         // Add click event listener to the button
-//         button.addEventListener('click', function(event) {
-//             event.stopPropagation(); // Prevent the click event on the card from triggering
-//             window.location.href = '../../phpinfo.php';
-//         });
-//     });
-// });
+    contactUs.on("click", () => {
+        window.open('../../phpinfo.php', '_blank');
+    });
+}
+
+TakeToPageOnClick();

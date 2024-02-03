@@ -12,15 +12,14 @@
     font-family: var(--main-font);
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
     margin-top: 2.5%;
     overflow-x:hidden;
+    background-color:darkgray;
+    height:500vh;
 }
 
-body {
-    background-color:darkgray;
-}
 
 .card-body {
     position: relative;
@@ -58,6 +57,13 @@ body {
     box-shadow: 5px 5px 10px 10px grey;
     transform: scale(1.05);
 }
+
+.card_1,
+.card_2,
+.card_3,
+.card_4 {
+    box-shadow:5px 5px 10px 10px grey;
+}
   
 .navbar {
     border: 1px solid black;
@@ -71,6 +77,17 @@ body {
     margin-left:1.05px;
     background: linear-gradient(to right, grey, darkgray, grey);
     animation: Animation 0.5s ease infinite alternate;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5); /* Adjust the alpha value for transparency */
+    z-index: -1;
 }
 
 .nav-link {
@@ -109,4 +126,136 @@ h1 {
 #description {
     font-size:23px;
     animation: Animation 0.5s ease infinite alternate;
+}
+
+input[name="search"] {
+    width:600px;
+    height:50px;
+}
+
+.error_msg_if_no_books_found {
+    font-size:25px;
+}
+
+.result_found_msg {
+    font-size:25px;
+    z-index:800;
+    height:5000px;
+    vertical-align:top;
+}
+
+.categories {
+    height:150px;
+    background-color:orange;
+    box-shadow:5px 5px 10px 10px grey;
+    overflow:hidden;
+    position:relative;
+    border:1px solid black;
+    border-radius:5%;
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.categories:hover {
+    transform:scale(1.05);
+    cursor:pointer;
+}
+
+h3[name="category-text"] {
+    font-size:23px;
+    animation: Animation 0.5s ease infinite alternate;
+    margin:0;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-50px;
+}
+
+.books {
+    height:150px;
+    background-color:green;
+    box-shadow:5px 5px 10px 10px grey;
+    overflow:hidden;
+    position:relative;
+    border:1px solid black;
+    border-radius:5%;
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.books:hover {
+    transform:scale(1.05);
+    cursor:pointer;
+}
+
+h3[name="book-text"] {
+    font-size:23px;
+    animation: Animation 0.5s ease infinite alternate;
+    margin:0;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-40px;
+}
+
+.authors {
+    height:150px;
+    background-color:red;
+    box-shadow:5px 5px 10px 10px grey;
+    overflow:hidden;
+    position:relative;
+    border:1px solid black;
+    border-radius:5%;
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.authors:hover {
+    transform:scale(1.05);
+    cursor:pointer;
+}
+
+h3[name="author-text"] {
+    font-size:23px;
+    animation: Animation 0.5s ease infinite alternate;
+    margin:0;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-40px;
+}
+
+.contact-us {
+    height:150px;
+    background-color:blue;
+    box-shadow:5px 5px 10px 10px grey;
+    overflow:hidden;
+    position:relative;
+    border:1px solid black;
+    border-radius:5%;
+    box-sizing:border-box;
+    padding:10px;
+}
+
+.contact-us:hover {
+    transform:scale(1.05);
+    cursor:pointer;
+}
+
+h3[name="contact-us-text"] {
+    font-size:23px;
+    animation: Animation 0.5s ease infinite alternate;
+    margin:0;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-50px;
 }
