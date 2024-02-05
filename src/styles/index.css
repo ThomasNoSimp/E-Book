@@ -161,7 +161,8 @@ input[name="search"] {
     cursor:pointer;
 }
 
-h3[name="category-text"] {
+h3[name="category-text"]
+{
     font-size:23px;
     animation: Animation 0.5s ease infinite alternate;
     margin:0;
@@ -190,7 +191,8 @@ h3[name="category-text"] {
     cursor:pointer;
 }
 
-h3[name="book-text"] {
+h3[name="book-text"] 
+{
     font-size:23px;
     animation: Animation 0.5s ease infinite alternate;
     margin:0;
@@ -248,7 +250,8 @@ h3[name="author-text"] {
     cursor:pointer;
 }
 
-h3[name="contact-us-text"] {
+h3[name="contact-us-text"] 
+{
     font-size:23px;
     animation: Animation 0.5s ease infinite alternate;
     margin:0;
@@ -258,4 +261,40 @@ h3[name="contact-us-text"] {
     top:50%;
     left:50%;
     margin-left:-50px;
+}
+
+div[slide="carousel"] 
+{
+    width: 800px;
+    height: 500px;
+    box-sizing: border-box;
+    box-shadow: -10px 0px 20px -10px rgba(0, 0, 0, 0.8), 10px 0px 20px -10px rgba(0, 0, 0, 0.8);
+}
+
+img[slide-image-index="1"],
+img[slide-image-index="2"],
+img[slide-image-index="3"] 
+{
+    width:800px;
+    height:500px;
+}
+
+h3[name="view-more-books-link"] 
+{
+    font-size:23px;
+    padding:5px;
+    border:1px solid black;
+    border-radius:2.5%;
+    transition:transform 0.3s ease;
+    width:500px;
+    user-select:none;
+    opacity:1;
+    background-color:unset;
+}
+
+h3[name="view-more-books-link"]:hover 
+{
+    cursor:pointer;
+    transform:scale(1.05);
+    box-shadow: 5px 5px 10px 10px grey;
 }

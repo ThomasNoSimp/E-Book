@@ -1,0 +1,73 @@
+/* Google Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Single+Day&display=swap');
+
+:root {
+    --main-font: 'Single Day', cursive;
+}
+
+* {
+    font-family: var(--main-font);
+}
+
+html, body {
+    scroll-behavior: smooth;
+    margin-top: 2.5%;
+    overflow-x:hidden;
+    background-color:darkgray;
+    height:500vh;
+}
+
+.navbar {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 0;
+    position: fixed; /* Fixed position to stick to the top */
+    width: 99.9%; /* Make navbar full width */
+    top: 0; /* Position at the top of the page */
+    z-index: 1000; /* Ensure it's above other elements */
+    padding-left:15px;
+    margin-left:1.05px;
+    background: linear-gradient(to right, grey, darkgray, grey);
+    animation: Animation 0.5s ease infinite alternate;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5); /* Adjust the alpha value for transparency */
+    z-index: -1;
+}
+
+.nav-link {
+    font-size:23px;
+    transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+.nav-link:hover {
+    transform:scale(1.1);
+    font-weight:1000;
+}
+
+.navbar-brand {
+    font-size:25px;
+    transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform:scale(1.3);
+    font-weight: 900;
+}
+
+@keyframes Animation {
+    from {
+        transform: translateX(-2px);
+    }
+    to {
+        transform: translateX(2px);
+    }
+}

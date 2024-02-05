@@ -21,13 +21,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#books">Books</a>
+                    <a class="nav-link" href="books.php">Books</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#authors">Authors</a>
@@ -42,6 +42,27 @@
                 <p Align="center" id="description">
                     E-Book website is a website which allows you to directly read or download your favorite books in one place.
                 </p>
+            </div>
+        </div>
+        <!-- Carousel -->
+        <div class="carousel-container d-flex justify-content-center">
+            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" slide="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.mm-lib.com/assets/img/slider-image-1.jpg" class="d-block w-100" alt="Slide 1" slide-image-index="1"> <!-- Carousel Images Credit to: https://mm-lib.com -->
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.mm-lib.com/assets/img/IMG_4533.jpg" class="d-block w-100" alt="Slide 2" slide-image-index="2"> <!-- Carousel Images Credit to: https://mm-lib.com -->
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.mm-lib.com/assets/img/slider-image-3.jpg" class="d-block w-100" alt="Slide 3" slide-image-index="3"> <!-- Carousel Images Credit to: https://mm-lib.com -->
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-5 justify-content-center">
@@ -134,6 +155,12 @@
         </div>
 
         <div class="row mt-5">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <h3 class="text-center" name="view-more-books-link">View more...</h3>
+            </div>
+        </div>
+
+        <div class="row mt-5">
             <div class="col-lg-3">
                 <div class="categories">
                     <h3 class="text-center" name="category-text">Categories</h3>
@@ -159,5 +186,9 @@
 
     <!-- Script -->
     <script src="src/scripts/index.js" defer></script>
+
+    <!-- Libaries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </body>
 </html>
