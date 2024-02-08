@@ -1,0 +1,4 @@
+# Ignore these as these are debugging and error logging files
+
+debug.html
+.vscode

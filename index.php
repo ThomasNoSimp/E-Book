@@ -6,35 +6,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/nav.css">
     <link rel="icon" href="src/images/book.png">
     <title>E-Book</title>
+
     <!-- Include jQuery from a CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">E-Book</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="books.php">Books</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#authors">Authors</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background:url('src/images/bg.jpg');">
+    <NavBar>
+      	<input type="checkbox" name="" id="chk1">
+      	<div class="logo"><h1>E-Book</h1></div>
+      	<div class="search-box">
+           <form action="">
+               <input type="text" name="search" id="srch" placeholder="Search">
+               <button type="submit"><i class="fa-duotone fa-magnifying-glass"></i></button>
+           </form>
+      	</div>
+      	<ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="books.php">Books</a></li>
+            <li><a href="authors.php">Authors</a></li>
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-telegram"></i></a>
+            </li>
+      	</ul>
+      	<div class="menu">
+      		<label for="chk1">
+              <i class="fa fa-bars"></i>
+      		</label>
+      	</div>
+    </NavBar>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -65,6 +73,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-6">
                 <div class="search-box">
@@ -72,17 +81,16 @@
                         <div class="input-group">
                             <input class="form-control form-floating" type="text" name="search" placeholder="Search books or authors...">
                             <button class="btn btn-secondary" type="submit">
-                                <!-- Include SVG icon here -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.86 3.86a1 1 0 1 0 1.415-1.413l-3.858-3.845zm-4.242 0a4.5 4.5 0 1 1 1.397-1.398 4.5 4.5 0 0 1-1.397 1.398z"/>
                                 </svg>
-                                <!-- End SVG icon -->
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        -->
         <div class="row mt-5">
             <?php
             // Define an array of PDF file paths
@@ -103,6 +111,7 @@
 
             // Check if search query is set
             if(isset($_GET['search'])) {
+                echo '<style>[slide="carousel"] { display: none; } [name="view-more-books-link"] { display:none; } #description { display: none; }</style>';
                 $search = $_GET['search'];
                 // Initialize a variable to track if any books are found
                 $booksFound = false;
@@ -160,7 +169,7 @@
             </div>
         </div>
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
             <div class="col-lg-3">
                 <div class="categories">
                     <h3 class="text-center" name="category-text">Categories</h3>
@@ -181,7 +190,7 @@
                     <h3 class="text-center" name="contact-us-text">Contact Us!</h3>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Script -->

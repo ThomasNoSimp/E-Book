@@ -4,64 +4,60 @@
 
 :root {
     --main-font: 'Single Day', cursive;
+    --main-font-color:white;
 }
 
 * {
     font-family: var(--main-font);
+    color:var(--main-font-color);
 }
 
-html, body {
-    scroll-behavior: smooth;
-    margin-top: 2.5%;
-    overflow-x:hidden;
-    background-color:darkgray;
-    height:500vh;
-}
-
-.navbar {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 0;
-    position: fixed; /* Fixed position to stick to the top */
-    width: 99.9%; /* Make navbar full width */
-    top: 0; /* Position at the top of the page */
-    z-index: 1000; /* Ensure it's above other elements */
-    padding-left:15px;
-    margin-left:1.05px;
-    background: linear-gradient(to right, grey, darkgray, grey);
-    animation: Animation 0.5s ease infinite alternate;
-}
-
-.navbar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(128, 128, 128, 0.5); /* Adjust the alpha value for transparency */
-    z-index: -1;
-}
-
-.nav-link {
-    font-size:23px;
-    transition: transform 0.3s ease, font-weight 0.3s ease;
-}
-
-.nav-link:hover {
-    transform:scale(1.1);
-    font-weight:1000;
-}
-
-.navbar-brand {
-    font-size:25px;
-    transition: transform 0.3s ease, font-weight 0.3s ease;
-}
-
-.navbar-brand:hover {
-    transform:scale(1.3);
-    font-weight: 900;
-}
+/* commented out for now{
+    .navbar {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 0;
+        position: fixed;
+        width: 99.9%;
+        top: 0;
+        z-index: 1000;
+        padding-left:15px;
+        margin-left:1.05px;
+        background: linear-gradient(to right, grey, darkgray, grey);
+        animation: Animation 0.5s ease infinite alternate;
+    }
+    
+    .navbar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(128, 128, 128, 0.5);
+        z-index: -1;
+    }
+    
+    .nav-link {
+        font-size:23px;
+        transition: transform 0.3s ease, font-weight 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        transform:scale(1.1);
+        font-weight:1000;
+    }
+    
+    .navbar-brand {
+        font-size:25px;
+        transition: transform 0.3s ease, font-weight 0.3s ease;
+    }
+    
+    .navbar-brand:hover {
+        transform:scale(1.3);
+        font-weight: 900;
+    }
+} */
 
 @keyframes Animation {
     from {
@@ -70,4 +66,34 @@ html, body {
     to {
         transform: translateX(2px);
     }
+}
+
+h1[name="page-title"] {
+    margin-top:100px;
+    color:white;
+}
+
+#description {
+    font-size:23px;
+    animation: Animation 0.5s ease infinite alternate;
+}
+
+.card_1:hover,
+.card_2:hover,
+.card_3:hover,
+.card_4:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 10px grey;
+    transform: scale(1.05);
+}
+
+.card_1,
+.card_2,
+.card_3,
+.card_4 {
+    box-shadow:5px 5px 10px 10px grey;
+}
+
+.card-title > img {
+    width:100%;
 }

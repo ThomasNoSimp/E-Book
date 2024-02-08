@@ -6,20 +6,13 @@
 
 :root {
     --main-font: 'Single Day', cursive;
+    --main-font-color: white;
 }
 
 * {
     font-family: var(--main-font);
+    color:var(--main-font-color);
 }
-
-html, body {
-    scroll-behavior: smooth;
-    margin-top: 2.5%;
-    overflow-x:hidden;
-    background-color:darkgray;
-    height:500vh;
-}
-
 
 .card-body {
     position: relative;
@@ -64,15 +57,16 @@ html, body {
 .card_4 {
     box-shadow:5px 5px 10px 10px grey;
 }
-  
-.navbar {
+
+/* commented out for now{
+    .navbar {
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 0;
-    position: fixed; /* Fixed position to stick to the top */
-    width: 99.9%; /* Make navbar full width */
-    top: 0; /* Position at the top of the page */
-    z-index: 1000; /* Ensure it's above other elements */
+    position: fixed;
+    width: 99.9%;
+    top: 0;
+    z-index: 1000;
     padding-left:15px;
     margin-left:1.05px;
     background: linear-gradient(to right, grey, darkgray, grey);
@@ -86,7 +80,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(128, 128, 128, 0.5); /* Adjust the alpha value for transparency */
+    background: rgba(128, 128, 128, 0.5);
     z-index: -1;
 }
 
@@ -109,6 +103,7 @@ html, body {
     transform:scale(1.3);
     font-weight: 900;
 }
+} */
 
 @keyframes Animation {
     from {
@@ -283,7 +278,7 @@ h3[name="view-more-books-link"]
 {
     font-size:23px;
     padding:5px;
-    border:1px solid black;
+    border:1px solid white;
     border-radius:2.5%;
     transition:transform 0.3s ease;
     width:500px;

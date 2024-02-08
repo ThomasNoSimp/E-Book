@@ -1,0 +1,114 @@
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Single+Day&display=swap');
+
+:root {
+    --main-font: 'Single Day', cursive;
+    --main-content-bg-color: rgba(255, 255, 255, 0.75);
+}
+
+* {
+    font-family: var(--main-font);
+}
+
+.content {
+    background-color:var(--main-content-bg-color);
+    height:100vh;
+    width:100%;
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5%;
+    padding:2.5%;
+    margin-bottom:2.5%;
+}
+
+
+h2[name="book-title"] {
+    margin-top:0; /* Reset default margin */
+}
+
+p[description="book-title"] {
+    margin-top:15px;
+    font-size:23px;
+    width:fit-content;
+}
+
+p[description="book-title"]:hover {
+    cursor:pointer;
+    user-select:none;
+}
+
+p[description="book-author"] {
+    margin-top:5px;
+    font-size:23px;
+    width:fit-content;
+}
+
+p[description="book-author"]:hover {
+    cursor:pointer;
+    user-select: none;
+}
+
+p[button="download-button"] {
+    font-size:19px;
+    box-sizing: border-box;
+    padding:10px;
+    background-color:var(--main-content-bg-color);
+    opacity:0.8;
+    border:1px solid black;
+    border-radius:5px;
+    width:8%;
+}
+
+p[button="download-button"]:hover {
+    cursor:pointer;
+    user-select:none;
+    transform:scale(1.05);
+    opacity: 1;
+}
+
+.toast-container {
+    position: absolute;
+    display: none; /* Initially hide the container */
+    z-index: 10000; /* Ensure the container is above other elements */
+}
+
+.center-content {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img[data-key="image"] {
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5px;
+    box-shadow:5px 5px 10px 10px grey;
+}
+
+.line-break {
+    width:100%;
+    height:5px;
+    shape-outside:polygon(0 50%, 100% 50%);
+    background-color:black;
+}
+
+h2[name="reviews-title"]::before, h2[name="reviews-title"]::after {
+    content:"\2605";
+    color: transparent; /* Hide the text content */
+    background-image: linear-gradient(45deg, yellow, orange); /* Gradient effect */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    animation: pulse 1s infinite alternate; /* Animation effect */
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}

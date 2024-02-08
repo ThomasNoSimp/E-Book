@@ -1,0 +1,130 @@
+NavBar *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial;
+}
+NavBar body{
+	background: url('../images/bg.jpg');
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+	margin-top:-100px;
+}
+
+NavBar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
+}
+
+#chk1{
+	display: none;
+}
+i{
+	color: #fff;
+	cursor: pointer;
+}
+NavBar .logo{
+	flex: 1;
+	color: #fff;
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+NavBar .logo:hover{
+	cursor:pointer;	
+}
+
+NavBar .search-box{
+	flex: 1;
+	position: relative;
+
+}
+NavBar .search-box input{
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+	background: #f2f2f2;
+	border-radius: 30px;
+	color: gray;
+	font-size: 16px;
+	text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+NavBar .search-box button{
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: scale(0.9);
+	background: rgba(0,0,0,0.5);
+}
+NavBar ul{
+	flex: 2;
+	display: flex;
+	justify-content: space-evenly;
+}
+NavBar ul li{
+	list-style: none;
+}
+NavBar ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 10px 15px;
+}
+NavBar ul li a:hover{
+	border-bottom: 2px solid cadetblue;
+}
+NavBar .menu{
+	font-size: 2.5em;
+	display: none;
+}
+@media(max-width:1000px){
+      .search-box button{
+      	position: absolute;
+      }
+      NavBar ul{
+      	position: fixed;
+      	top: 100px;
+      	right: -100%;
+      	background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+      }
+      NavBar .menu{
+      	display: block;
+      	width: 100px;
+      	text-align: center;
+      }
+      #chk1:checked ~ ul{
+      	right: 0;
+      }
+}
+@media(max-width: 600px){
+	NavBar .logo{
+		font-size: 10px;
+		margin-left: 8px;
+	}
+	NavBar ul{
+		width: 100%;
+	}
+}
