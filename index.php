@@ -10,6 +10,8 @@
     <link rel="icon" href="src/images/book.png">
     <title>E-Book</title>
 
+    <script src="src/scripts/global-logo-script.js" type="module" defer></script>
+
     <!-- Include jQuery from a CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -109,6 +111,14 @@
                 'src/Books/Book-Images/MoeSatLinnHtet_Kywe.jpeg'
             );
 
+            // Define an array of corresponding PHP file paths
+            $php_files = array(
+                'books/001.php',
+                'books/002.php',
+                'books/003.php',
+                'books/004.php'
+            );
+
             // Check if search query is set
             if(isset($_GET['search'])) {
                 echo '<style>[slide="carousel"] { display: none; } [name="view-more-books-link"] { display:none; } #description { display: none; }</style>';
@@ -118,6 +128,7 @@
                 // Initialize a variable to count the number of books found
                 $numResults = 0;
                 // Loop through each PDF file again, but filter based on search keyword
+                echo '<title>Search Results: ' . $search . '</title>';
                 foreach ($pdf_files as $key => $pdf_file ) {
                     // Check if the title contains the search keyword
                     if (stripos(basename($pdf_file, ".pdf"), $search) !== false) {
@@ -128,7 +139,7 @@
                             <div class="card card_<?php echo $key + 1; ?>">
                                 <div class="card-body">
                                     <h5 class="card-title"><img src="<?php echo $image_files[$key]; ?>" alt="Book"></h5>
-                                    <a href="<?php echo $pdf_file; ?>" target="_blank" class="btn btn-secondary read-btn">Read</a>
+                                    <a href="<?php echo $php_files[$key]; ?>" class="btn btn-secondary read-btn">Read</a>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +161,7 @@
                         <div class="card card_<?php echo $key + 1; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><img src="<?php echo $image_files[$key]; ?>" alt="Book"></h5>
-                                <a href="<?php echo $pdf_file; ?>" target="_blank" class="btn btn-secondary read-btn">Read</a>
+                                <a href="<?php echo $php_files[$key]; ?>" class="btn btn-secondary read-btn">Read</a>
                             </div>
                         </div>
                     </div>
@@ -164,7 +175,7 @@
         </div>
 
         <div class="row mt-5">
-            <div class="col-lg-12 d-flex justify-content-center">
+            <div class="col-lg-12 d-flex justify-content-center mb-3">
                 <h3 class="text-center" name="view-more-books-link">View more...</h3>
             </div>
         </div>

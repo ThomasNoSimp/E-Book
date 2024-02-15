@@ -11,9 +11,18 @@
     font-family: var(--main-font);
 }
 
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+
 .content {
     background-color:var(--main-content-bg-color);
-    height:100vh;
+    height:fit-content;
     width:100%;
     box-sizing:border-box;
     border:1px solid black;
@@ -24,7 +33,7 @@
 
 
 h2[name="book-title"] {
-    margin-top:0; /* Reset default margin */
+    margin:0; /* Deafult margin */
 }
 
 p[description="book-title"] {
@@ -111,4 +120,69 @@ h2[name="reviews-title"]::before, h2[name="reviews-title"]::after {
 @keyframes pulse {
     from { transform: scale(1); }
     to { transform: scale(1.2); }
+}
+
+.review {
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.profile-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* creates a circle */
+    overflow: hidden; /* ensures the image stays within the circle */
+    position: relative;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(201,201,201,1) 100%); /* gradient background */
+    border: 2px solid #333; /* border for the circle */
+    display:flex;
+}
+
+.profile-container::before {
+    content: '';
+    display: block;
+    padding-top: 100%; /* maintains aspect ratio for the circle */
+}
+
+img[name="ProfileImage"] {
+    width: 100%; /* makes the image fill the circle */
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+img[name="ProfileImage"] {
+    width: 100%; /* makes the image fill the circle */
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform:translateX(-50%);
+}
+
+.error-message {
+    visibility:hiddene;
+    color: red;
+}
+
+.error-message {
+    display:none;
+    color:red;
+}
+
+#srch:disabled {
+    opacity:0.6;
+    cursor:not-allowed;
+}
+
+#jsDisabledModal {
+    display:block;
+}
+
+#ShareBtn {
+    margin-left:45%;
+    background-color:var(--main-content-bg-color);
+    opacity: 0.8;
 }

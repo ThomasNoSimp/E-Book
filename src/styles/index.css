@@ -9,6 +9,10 @@
     --main-font-color: white;
 }
 
+html {
+    height:150vh;
+}
+
 * {
     font-family: var(--main-font);
     color:var(--main-font-color);

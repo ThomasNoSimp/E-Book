@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../src/styles/main-css-for-books-array.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <title>E-Book | SharTu_CatWorld</title>
+    <title>E-Book | ChitSanWin_StayTop</title>
 
     <script type="module" src="../src/scripts/global-logo-script.js" defer></script>
 
@@ -39,7 +39,7 @@
             <li><a href="../contactus.php">Contact Us</a></li>
             <li>
                 <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>e.
                 <a href=""><i class="fab fa-telegram"></i></a>
             </li>
       	</ul>
@@ -53,14 +53,13 @@
         <div class="row mt-5">
             <div class="col-lg-12 mx-auto">
                 <div class="content">
-                    <h2 class="center-content book-title" name="book-title">SharTu_CatWorld</h2>
-                    <img data-key="image" src="../src/Books/Book-Images/SharTu_CatWorld.jpeg" alt="Book Cover" class="img-fluid center-block">
+                    <h2 class="center-content book-title" name="book-title">ChitSanWin_StayTop</h2>
+                    <img data-key="image" src="../src/Books/Book-Images/ChitSanWin_StayTop.jpeg" alt="Book Cover" class="img-fluid center-block">
                     <!-- Description Content -->
-                    <p description="book-title" class="center-content"><strong>Book Title: </strong>SharTu_CatWorld</p>
-                    <p description="book-author" class="center-content"><strong>Book Author: </strong>SharTu</p>
+                    <p description="book-title" class="center-content"><strong>Book Title: </strong>ChitSanWin_StayTop</p>
+                    <p description="book-author" class="center-content"><strong>Book Author: </strong>ChitSanWin</p>
                     <!-- Buttons -->
                     <p Align="center" button="download-button" id="downloadBtn" class="center-content">Download</p>
-                    <button id="ShareBtn" class="btn mb-3">Share on Telegram</button>
                     <div class="line-break"></div>
                     <h2 class="center-content mt-3" name="reviews-title">Reviews</h2>
                     <div class="row">
@@ -102,36 +101,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Copied to Clipboard Message -->
-                    <div class="toast-container">
-                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
-                            <div class="toast-body bg-success text-white">
-                                Text copied to clipboard.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Error Message to display if user has no acess to internet connection -->
-                    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="errorModalLabel">Error</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-                                <div class="modal-body">
-                                You are currently offline. Please check your internet connection.
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                                                                                                            
+                                                                                                                                                                                                                                        <!-- Copied to Clipboard Message -->
+                                                                                                                                                                                                                                        <div class="toast-container">
+                                                                                                                                                                                                                                            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+                                                                                                                                                                                                                                                <div class="toast-body bg-success text-white">
+                                                                                                                                                                                                                                                    Text copied to clipboard.
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
                     <!-- Script -->
                     <script type="text/javascript" defer>
                         $(document).ready(function(){
@@ -186,7 +163,7 @@
                             // Download Script
                             $('#downloadBtn').on('click', function() {
                                 // URL of the PDF file on the server
-                                var url = '../src/Books/SharTu_CatWorld.pdf';
+                                var url = '../src/Books/ChitSanWin_StayTop.pdf';
 
                                 // Fetch the file using the Fetch API
                                 fetch(url)
@@ -204,7 +181,7 @@
                                     // Create a link element
                                     var link = document.createElement('a');
                                     link.href = blobUrl;
-                                    link.download = 'SharTu_CatWorld.pdf'; // Specify the filename for download
+                                    link.download = 'ChitSanWin_StayTop.pdf'; // Specify the filename for download
                                     link.click(); // Trigger the download
                                 })
                                 .catch(error => {
@@ -227,97 +204,11 @@
                             $('#srch').on('keypress', function(e) {
                                 e.preventDefault(); // Prevent typing
                             });
-
-                            window.onload = function() {
-                                function checkOnlineStatus() {
-                                    if (!navigator.onLine) {
-                                        $('#errorModal').modal('show'); // Show Bootstrap modal
-                                    } else {
-                                        $('#errorModal').modal('hide'); // Hide Bootstrap modal
-                                    }
-                                }
-
-                                // Check online status initially
-                                checkOnlineStatus();
-
-                                // Attach event listener for online and offline events using anonymous function
-                                window.addEventListener('online', () => {
-                                checkOnlineStatus();
-                                });
-                                window.addEventListener('offline', () => {
-                                checkOnlineStatus();
-                                });
-                            }
-
-                            function isAdBlockerEnabled() {
-                                try {
-                                    // Check for common ad blocker classes
-                                    const adBlockerClasses = ['ad', 'advertising', 'ad-banner', 'ad-container', 'ad-placeholder', 'ad-slot'];
-                                    const adElements = document.querySelectorAll(adBlockerClasses.map(className => `.${className}`).join(', '));
-
-                                    // Check if any ad elements are present
-                                    if (adElements.length > 0) {
-                                        return true; // Ad blocker likely enabled
-                                    }
-
-                                    // Check if any common ad-related JavaScript functions are overwritten
-                                    const adFunctions = ['open', 'write', 'createElement', 'appendChild', 'insertBefore'];
-                                    const functionOverwritten = adFunctions.some(func => {
-                                        const originalFunction = Document.prototype[func];
-                                        const descriptor = Object.getOwnPropertyDescriptor(HTMLElement.prototype, func);
-                                        if (descriptor && descriptor.value) {
-                                            return originalFunction.toString() !== descriptor.value.toString();
-                                        }
-                                        return false;
-                                    });
-
-                                    if (functionOverwritten) {
-                                        return true; // Ad blocker likely enabled
-                                    }
-
-                                    // Check if any common ad-related variables are modified
-                                    const adVariables = ['google_ad_client', 'googletag', 'AdBlockDetector'];
-                                    const variableModified = adVariables.some(variable => {
-                                        return window[variable] !== undefined;
-                                    });
-
-                                    if (variableModified) {
-                                        return true; // Ad blocker likely enabled
-                                    }
-
-                                    return false; // Ad blocker likely not enabled
-                                } catch (error) {
-                                    console.error('Error detecting ad blocker:', error);
-                                    return false; // Ad blocker likely not enabled (fallback)
-                                }
-                            }
-
-                            // Usage
-                            if (isAdBlockerEnabled()) {
-                                console.log("Ad blocker is likely enabled.");
-                                // Display a message or take appropriate action
-                            } else {
-                                console.log("Ad blocker is likely not enabled.");
-                                // Continue with your application logic
-                            }
-
-                            // Function to handle sharing the e-book on Telegram
-                            function shareOnTelegram() {
-                                const telegramShareLink = 'https://t.me/share/url?url=http://www.localhost/books/001.php&text=Check%20out%20this%20e-book%20on%20My%20E-book%20Website';
-                                window.open(telegramShareLink, '_blank');
-                            }
-
-                            // Add click event listener to the Telegram share button
-                            $('#ShareBtn').on('click', shareOnTelegram);
                         });
                     </script>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
