@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/nav.css">
+    <link rel="shortcut icon" href="src/images/book.png" type="image/x-icon">
+    <title>E-Book | Contact Us</title>
+    <script>
+        // Function to detect if the user is on a mobile device
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Function to send device information to the Go server
+        function sendDeviceInfo() {
+            var isMobile = isMobileDevice();
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/detect-device", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify({ isMobile: isMobile }));
+        }
+    </script>
+    
+    <link rel="stylesheet" href="src/styles/contactus.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body style="background:url('src/images/bg.jpg');">
+    <NavBar>
+        <input type="checkbox" name="" id="chk1">
+        <div class="logo"><h1>E-Book</h1></div>
+        <div class="search-box">
+         <form action="">
+             <input type="text" name="search" id="srch" placeholder="Search">
+             <button type="submit"><i class="fa-duotone fa-magnifying-glass"></i></button>
+         </form>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="authors.html">Authors</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-telegram"></i></a>
+          </li>
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+            <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </NavBar>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="content">
+                    <h3 class="text-center title">Contact Us</h3>
+                    <p name="description">Fill out the form to contact us or contact us via the provided social medias below.</p>
+                    <form action="server/save_contact_form.php" id="contactForm" action="#" method="post" class="form form-content form-floating justify-content-center">
+                        <div class="col-lg-12 text-center form-floating box-1">
+                            <label for="name" class="form-label ms-3 label">Enter your name:</label><br>
+                            <input type="text" name="name" id="name" class="form-control w-75 ms-3 input">
+                        </div>
+                        <div class="col-lg-12 text-center form-floating box-2">
+                            <label for="email" class="form-label ms-3 label">Enter your email:</label><br>
+                            <input type="text" name="name" id="email" class="form-control w-75 ms-3 input">
+                        </div>
+                        <div class="col-lg-12 text-center form-floating box-3">
+                            <label for="phNumber" class="form-label ms-3 label">Enter your phone number:</label><br>
+                            <input type="text" name="name" id="phNumber" class="form-control w-75 ms-3 input">
+                        </div>
+                        <div class="col-lg-12 text-center form-floating box-4">
+                            <label for="content" class="form-label ms-3 label">Content:</label><br>
+                            <input type="text" name="name" id="content" class="form-control w-75 ms-3 input">
+                        </div>
+                        <button type="submit" class="btn btn-secondary mt-3 submit-btn">Submit</button>
+                        <script defer>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                let labels = document.querySelectorAll('.label');
+                                let inputs = document.querySelectorAll('.input');
+                                
+                                inputs.forEach((input, index) => {
+                                    input.addEventListener('focus', () => {
+                                        labels[index].style.color = 'grey';
+                                    });
+
+                                    input.addEventListener('blur', () => {
+                                        labels[index].style.color = 'rgba(0, 0, 0, 0.85)';
+                                    });
+                                });
+                            });
+                        </script>                                           
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

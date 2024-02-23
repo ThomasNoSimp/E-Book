@@ -20,6 +20,9 @@
   <!-- Favicon -->
   <link rel="icon" href="../src/images/book.png">
 
+  <!-- CORS -->
+  <script type="module" src="../src/scripts/serverConfig/cors.js"></script>
+
 </head>
 <body style="background:url('../src/images/bg.jpg');">
   <NavBar>
@@ -33,10 +36,10 @@
       <p class="error-message">Sorry, search box is disabled for this page.</p>
     </div>
     <ul>
-      <li><a href="../index.php">Home</a></li>
-      <li><a href="../books.php">Books</a></li>
-      <li><a href="../authors.php">Authors</a></li>
-      <li><a href="../contactus.php">Contact Us</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../authors.html">Authors</a></li>
+      <li><a href="../contactus.html">Contact Us</a></li>
       <li>
         <a href=""><i class="fab fa-facebook"></i></a>
         <a href=""><i class="fab fa-twitter"></i></a>
@@ -59,8 +62,7 @@
           <p description="book-title" class="center-content"><strong>Book Title: </strong>SharTu_CatWorld</p>
           <p description="book-author" class="center-content"><strong>Book Author: </strong>SharTu</p>
           <!-- Buttons -->
-          <p Align="center" button="download-button" id="downloadBtn" class="center-content">Download</p>
-          <button id="ShareBtn" class="btn mb-3">Share on Telegram</button>
+          <p Align="center" button="download-button" id="downloadBtn" class="center-content"><a href="../src/Books/SharTu_CatWorld.pdf" download>Download</a></p>
           <div class="line-break"></div>
           <h2 class="center-content mt-3" name="reviews-title">Reviews</h2>
           <div class="row">
@@ -112,7 +114,7 @@
             </div>
           </div>
 
-          <!-- Error Message to display if user has no acess to internet connection -->
+          <!-- Error Message to display if user has no access to internet connection -->
           <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -291,23 +293,13 @@
                 }
               }
 
-              // Usage
               if (isAdBlockerEnabled()) {
                 console.log("Ad blocker is likely enabled.");
-                // Display a message or take appropriate action
+                return false;
               } else {
                 console.log("Ad blocker is likely not enabled.");
-                // Continue with your application logic
+                return true;
               }
-
-              // Function to handle sharing the e-book on Telegram
-              function shareOnTelegram() {
-                const telegramShareLink = 'https://t.me/share/url?url=http://www.localhost/books/001.php&text=Check%20out%20this%20e-book%20on%20My%20E-book%20Website';
-                window.open(telegramShareLink, '_blank');
-              }
-
-              // Add click event listener to the Telegram share button
-              $('#ShareBtn').on('click', shareOnTelegram);
             });
           </script>
         </div>

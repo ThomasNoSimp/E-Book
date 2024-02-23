@@ -1,0 +1,67 @@
+/* Google Fonts Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Single+Day&display=swap');
+
+:root {
+    --main-font: 'Single Day', cursive;
+    --main-font-color:white;
+}
+
+* {
+    font-family:var(--main-font);
+    color:var(--main-font-color);
+}
+
+*::selection {
+    background-color:rgb(62, 0, 170, 0.2);
+}
+
+.content {
+    background-color:rgba(255, 255, 255, 0.75);
+    border:1px solid black;
+    border-radius:10px;
+    margin-top:5%;
+    height:80vh;
+    box-sizing: border-box;
+    position:relative;
+    width:calc(100% - 2.5px);
+    margin-bottom:5%;
+}
+
+.title {
+    font-size:23px;
+    color:black !important;
+    position:absolute;
+    left:50%;
+    top:5%;
+    z-index:1000;
+    transform:translate(-50%, -50%);
+    cursor:default;
+}
+
+p[name="description"] {
+    font-size:20px;
+    color:black;
+    margin-top:50px;
+    box-sizing:border-box;
+    text-align:center;
+    cursor:default;
+}
+
+.label {
+    color:rgba(0, 0, 0, 0.85);
+    font-size:20px;
+    cursor:default;
+}
+
+.box-1, .box-2, .box-3, .box-4 {
+    margin-top:20px;
+    margin-left:100px;
+}
+
+.submit-btn {
+    margin-top:20px;
+    border:1px solid black;
+    border-radius:5%;
+    margin-left:550px;
+}

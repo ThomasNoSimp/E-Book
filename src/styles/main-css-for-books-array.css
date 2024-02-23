@@ -186,3 +186,11 @@ img[name="ProfileImage"] {
     background-color:var(--main-content-bg-color);
     opacity: 0.8;
 }
+
+#downloadBtn > a {
+    text-decoration:none;
+    color:black;
+    box-sizing:content-box;
+    cursor:pointer;
+    line-height:1em;
+}

@@ -19,6 +19,9 @@
 
     <!-- Favicon -->
     <link rel="icon" href="../src/images/book.png">
+    
+    <!-- CORS -->
+    <script type="module" src="../src/scripts/serverConfig/cors.js"></script>
 
 </head>
 <body style="background:url('../src/images/bg.jpg');">
@@ -37,10 +40,10 @@
            <p class="error-message">Sorry, search box is disabled for this page.</p>
       	</div>
       	<ul>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="../books.php">Books</a></li>
-            <li><a href="../authors.php">Authors</a></li>
-            <li><a href="../contactus.php">Contact Us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../books.html">Books</a></li>
+            <li><a href="../authors.html">Authors</a></li>
+            <li><a href="../contactus.html">Contact Us</a></li>
             <li>
                 <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>e.
@@ -63,7 +66,7 @@
                     <p description="book-title" class="center-content"><strong>Book Title: </strong>NayNor_Butterfly</p>
                     <p description="book-author" class="center-content"><strong>Book Author: </strong>NayNor</p>
                     <!-- Buttons -->
-                    <p Align="center" button="download-button" id="downloadBtn" class="center-content">Download</p>
+                    <p Align="center" button="download-button" id="downloadBtn" class="center-content"><a href="../src/Books/NayNor_Butterfly.pdf" download>Donwload</a></p>
                     <div class="line-break"></div>
                     <h2 class="center-content mt-3" name="reviews-title">Reviews</h2>
                     <div class="row">
