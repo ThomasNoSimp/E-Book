@@ -185,33 +185,33 @@
               $('[description="book-author"]').on('click', copyBookAuthor);
 
               // Download Script
-              // $('#downloadBtn').on('click', function() {
-              //   // URL of the PDF file on the server
-              //   var url = '../src/Books/SharTu_CatWorld.pdf';
+              $('#downloadBtn').on('click', function() {
+                // URL of the PDF file on the server
+                var url = '../src/Books/Jue_ShortStories36.pdf';
 
-              //   // Fetch the file using the Fetch API
-              //   fetch(url)
-              //   .then(response => {
-              //     // Check if the response is successful
-              //     if (!response.ok) {
-              //       throw new Error('Network response was not ok');
-              //     }
-              //     return response.blob(); // Return the response as a Blob
-              //   })
-              //   .then(blob => {
-              //     // Create a temporary URL for the Blob
-              //     var blobUrl = URL.createObjectURL(blob);
+                // Fetch the file using the Fetch API
+                fetch(url)
+                .then(response => {
+                  // Check if the response is successful
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.blob(); // Return the response as a Blob
+                })
+                .then(blob => {
+                  // Create a temporary URL for the Blob
+                  var blobUrl = URL.createObjectURL(blob);
 
-              //     // Create a link element
-              //     var link = document.createElement('a');
-              //     link.href = blobUrl;
-              //     link.download = 'SharTu_CatWorld.pdf'; // Specify the filename for download
-              //     link.click(); // Trigger the download
-              //   })
-              //   .catch(error => {
-              //     console.error('There was a problem with the fetch operation:', error);
-              //   });
-              // });
+                  // Create a link element
+                  var link = document.createElement('a');
+                  link.href = blobUrl;
+                  link.download = 'Jue_ShortStories36.pdf'; // Specify the filename for download
+                  link.click(); // Trigger the download
+                })
+                .catch(error => {
+                  console.error('There was a problem with the fetch operation:', error);
+                });
+              });
 
               $('#srch').disabled = true;
 
